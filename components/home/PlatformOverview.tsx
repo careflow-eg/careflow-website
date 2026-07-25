@@ -101,6 +101,7 @@ export function PlatformOverview() {
                   src="/assets/img/hero-bg.png"
                   alt="CareFlow Platform Overview"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#021418] via-transparent to-transparent" />

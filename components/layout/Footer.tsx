@@ -29,18 +29,16 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-12 border-b border-teal-950">
           {/* Brand & Contact Section */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="flex items-center space-x-2.5">
-              <div className="relative h-10 w-10 shrink-0">
+            <div className="flex items-center space-x-3">
+              <div className="relative h-10 w-[165px]">
                 <Image
-                  src="/assets/img/logo_square.png"
+                  src="/assets/img/logo_white.png"
                   alt="CareFlow AI Platform"
                   fill
-                  className="object-contain"
+                  sizes="(max-width: 768px) 140px, 165px"
+                  className="object-contain object-left"
                 />
               </div>
-              <span className="text-xl font-extrabold text-white tracking-tight">
-                CareFlow
-              </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-md">
               CareFlow is an AI Clinical Assistant that empowers healthcare providers by automating clinical documentation, structuring patient history, analyzing lab &amp; radiology reports, and delivering actionable decision support.
