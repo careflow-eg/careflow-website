@@ -44,7 +44,7 @@ export function PlatformOverview() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Text & Features */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-[#06635d] dark:text-teal-300 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-[#06635d] dark:text-teal-300 text-xs font-semibold uppercase tracking-wider mb-4">
               <Bot className="w-4 h-4 text-teal-500" />
               <span>Platform Intelligence</span>
             </div>

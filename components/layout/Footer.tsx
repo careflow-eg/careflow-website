@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   MapPin,
-  Phone,
   Mail,
   ArrowUp,
   Stethoscope,
@@ -53,17 +52,6 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3 text-sm text-slate-300">
                 <div className="p-2 rounded-lg bg-teal-950/60 text-teal-400 border border-teal-800/40">
-                  <Phone className="w-4 h-4" />
-                </div>
-                <a
-                  href="tel:+15552347000"
-                  className="hover:text-teal-400 transition-colors"
-                >
-                  +1 (555) 234-7000
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-sm text-slate-300">
-                <div className="p-2 rounded-lg bg-teal-950/60 text-teal-400 border border-teal-800/40">
                   <Mail className="w-4 h-4" />
                 </div>
                 <a
@@ -95,14 +83,6 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/solutions"
-                    className="hover:text-teal-400 transition-colors"
-                  >
-                    Clinical Solutions
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/how-it-works"
                     className="hover:text-teal-400 transition-colors"
                   >
@@ -128,7 +108,7 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Column 2: Solutions & Portals */}
+            {/* Column 2: Portals & Help */}
             <div className="space-y-4">
               <h4 className="text-white font-semibold text-sm tracking-wider uppercase flex items-center gap-2">
                 <Stethoscope className="w-4 h-4 text-teal-400" />
@@ -157,26 +137,10 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/solutions"
-                    className="hover:text-teal-400 transition-colors"
-                  >
-                    Internal &amp; Family Medicine
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/solutions"
-                    className="hover:text-teal-400 transition-colors"
-                  >
-                    Emergency Care Units
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/faq"
                     className="hover:text-teal-400 transition-colors"
                   >
-                    Specialty Coverage
+                    Specialty Coverage & FAQ
                   </Link>
                 </li>
               </ul>

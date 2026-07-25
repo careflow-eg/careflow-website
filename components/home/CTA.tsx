@@ -15,7 +15,7 @@ export function CTA() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div className="max-w-3xl mx-auto space-y-6">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-teal-950/80 border border-teal-800 text-teal-300 text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-teal-950/80 border border-teal-800 text-teal-300 text-xs font-semibold uppercase tracking-wider mb-4">
             <ShieldCheck className="w-4 h-4 text-teal-400" />
             <span>Ready for Immediate Deployment</span>
           </div>

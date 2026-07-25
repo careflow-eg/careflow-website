@@ -10,7 +10,6 @@ const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   clinic: z.string().min(2, "Clinic / Organization name is required"),
-  phone: z.string().min(6, "Please enter a valid phone number"),
   message: z.string().min(10, "Message must be at least 10 characters long"),
 });
 
@@ -121,46 +120,24 @@ export function ContactForm() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* Clinic */}
-            <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
-                Clinic / Healthcare Center *
-              </label>
-              <input
-                {...register("clinic")}
-                type="text"
-                placeholder="Apex Internal Medicine Clinic"
-                className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-[#06171a] border text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 ${
-                  errors.clinic
-                    ? "border-rose-500"
-                    : "border-slate-200 dark:border-teal-900/60"
-                }`}
-              />
-              {errors.clinic && (
-                <p className="text-[11px] text-rose-500">{errors.clinic.message}</p>
-              )}
-            </div>
-
-            {/* Phone */}
-            <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
-                Phone Number *
-              </label>
-              <input
-                {...register("phone")}
-                type="tel"
-                placeholder="+1 (555) 234-7000"
-                className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-[#06171a] border text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 ${
-                  errors.phone
-                    ? "border-rose-500"
-                    : "border-slate-200 dark:border-teal-900/60"
-                }`}
-              />
-              {errors.phone && (
-                <p className="text-[11px] text-rose-500">{errors.phone.message}</p>
-              )}
-            </div>
+          {/* Clinic */}
+          <div className="space-y-1.5">
+            <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+              Clinic / Healthcare Center *
+            </label>
+            <input
+              {...register("clinic")}
+              type="text"
+              placeholder="Apex Internal Medicine Clinic"
+              className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-[#06171a] border text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 ${
+                errors.clinic
+                  ? "border-rose-500"
+                  : "border-slate-200 dark:border-teal-900/60"
+              }`}
+            />
+            {errors.clinic && (
+              <p className="text-[11px] text-rose-500">{errors.clinic.message}</p>
+            )}
           </div>
 
           {/* Message */}

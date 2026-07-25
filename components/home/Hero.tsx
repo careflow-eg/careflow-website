@@ -34,7 +34,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800/60 text-[#06635d] dark:text-teal-300 text-xs font-semibold uppercase tracking-wider"
+            className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800/60 text-[#06635d] dark:text-teal-300 text-xs font-semibold uppercase tracking-wider mb-4"
           >
             <Sparkles className="w-3.5 h-3.5 text-teal-500 animate-pulse" />
             <span>Next-Generation AI Clinical Assistant</span>
@@ -49,7 +49,7 @@ export function Hero() {
           >
             Empower Clinical Decisions with{" "}
             <span className="bg-gradient-to-r from-[#06635d] via-teal-500 to-blue-600 bg-clip-text text-transparent">
-              CareFlow Intelligence
+              CareFlow
             </span>
           </motion.h1>
 

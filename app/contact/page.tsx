@@ -1,7 +1,7 @@
 import React from "react";
 import Metadata from "next";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { MapPin, Phone, Mail, Clock, ShieldCheck } from "lucide-react";
+import { MapPin, Mail, Clock, ShieldCheck } from "lucide-react";
 
 export const metadata = {
   title: "Contact CareFlow AI | Request a Demo",
@@ -15,7 +15,7 @@ export default function ContactPage() {
       {/* Header */}
       <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative">
         <div className="max-w-4xl mx-auto px-4 space-y-4">
-          <span className="text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
+          <span className="inline-block mb-4 text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
             Contact &amp; Deployment
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
@@ -50,18 +50,6 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white text-sm">Medical Center Address</h3>
                     <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">CareFlow Medical Center, 1 Health Plaza</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40">
-                  <div className="p-3 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 shrink-0">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 dark:text-white text-sm">Direct Telephone</h3>
-                    <a href="tel:+15552347000" className="text-xs text-teal-600 dark:text-teal-400 hover:underline mt-1 block">
-                      +1 (555) 234-7000
-                    </a>
                   </div>
                 </div>
 

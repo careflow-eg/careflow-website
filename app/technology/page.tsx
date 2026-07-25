@@ -24,7 +24,7 @@ export default function TechnologyPage() {
       {/* Header */}
       <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative">
         <div className="max-w-4xl mx-auto px-4 space-y-4">
-          <span className="text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
+          <span className="inline-block mb-4 text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
             CareFlow AI Core Architecture
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
@@ -44,7 +44,7 @@ export default function TechnologyPage() {
             <div className="absolute top-0 right-0 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="text-center max-w-2xl mx-auto space-y-2 mb-10">
-              <span className="text-xs font-bold text-teal-400 uppercase tracking-widest">
+              <span className="inline-block mb-4 text-xs font-bold text-teal-400 uppercase tracking-widest">
                 Pipeline Architecture
               </span>
               <h2 className="text-2xl font-extrabold text-white">

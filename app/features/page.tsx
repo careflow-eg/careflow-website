@@ -30,7 +30,7 @@ export default function FeaturesPage() {
       {/* Header Banner */}
       <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 space-y-4">
-          <span className="text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
+          <span className="inline-block mb-4 text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
             CareFlow Platform Features
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">

@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "../providers/ThemeProvider";
 import {
   Mail,
-  Phone,
   Sun,
   Moon,
   ChevronDown,
@@ -15,7 +14,6 @@ import {
   X,
   UserCheck,
   Stethoscope,
-  ShieldCheck,
   Users,
 } from "lucide-react";
 
@@ -41,7 +39,6 @@ export function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/features", label: "Features" },
-    { href: "/solutions", label: "Solutions" },
     { href: "/how-it-works", label: "How It Works" },
     { href: "/technology", label: "AI Tech" },
     { href: "/about", label: "About" },
@@ -53,8 +50,6 @@ export function Header() {
     process.env.NEXT_PUBLIC_DOCTOR_PORTAL_URL || "https://doctor.careflowai.health";
   const patientPortalUrl =
     process.env.NEXT_PUBLIC_PATIENT_PORTAL_URL || "http://localhost:5174/login";
-  const adminPortalUrl =
-    process.env.NEXT_PUBLIC_ADMIN_PORTAL_URL || "http://localhost:5176";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
@@ -68,13 +63,6 @@ export function Header() {
             >
               <Mail className="w-3.5 h-3.5 text-teal-500" />
               <span>info@careflowai.health</span>
-            </a>
-            <a
-              href="tel:+15552347000"
-              className="flex items-center space-x-1.5 hover:text-teal-400 transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-teal-500" />
-              <span>+1 (555) 234-7000</span>
             </a>
           </div>
           <div className="flex items-center space-x-4">
@@ -182,18 +170,6 @@ export function Header() {
                     <div>
                       <div className="font-medium">Patient Portal</div>
                       <div className="text-xs text-slate-400">History & Results</div>
-                    </div>
-                  </a>
-                  <a
-                    href={adminPortalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-3 px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-teal-50 dark:hover:bg-teal-950/50 hover:text-[#06635d] dark:hover:text-teal-300 transition-colors"
-                  >
-                    <ShieldCheck className="w-4 h-4 text-blue-600" />
-                    <div>
-                      <div className="font-medium">Admin Dashboard</div>
-                      <div className="text-xs text-slate-400">Platform Control</div>
                     </div>
                   </a>
                 </div>
