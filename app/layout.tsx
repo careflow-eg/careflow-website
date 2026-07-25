@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://careflowai.health"),
   title: {
     default: "CareFlow AI — Connected AI Clinical Care & Assistant Platform",
     template: "%s | CareFlow AI Platform",
