@@ -49,7 +49,7 @@ export function Header() {
   const doctorPortalUrl =
     process.env.NEXT_PUBLIC_DOCTOR_PORTAL_URL || "https://doctor.careflowai.health";
   const patientPortalUrl =
-    process.env.NEXT_PUBLIC_PATIENT_PORTAL_URL || "http://localhost:5174/login";
+    process.env.NEXT_PUBLIC_PATIENT_PORTAL_URL || "https://patient.careflowai.health";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">

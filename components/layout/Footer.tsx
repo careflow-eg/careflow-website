@@ -21,7 +21,7 @@ export function Footer() {
   const doctorPortalUrl =
     process.env.NEXT_PUBLIC_DOCTOR_PORTAL_URL || "https://doctor.careflowai.health";
   const patientPortalUrl =
-    process.env.NEXT_PUBLIC_PATIENT_PORTAL_URL || "http://localhost:5174/login";
+    process.env.NEXT_PUBLIC_PATIENT_PORTAL_URL || "https://patient.careflowai.health";
 
   return (
     <footer className="bg-[#021418] text-slate-300 relative pt-16 pb-8 border-t border-teal-900/40">
