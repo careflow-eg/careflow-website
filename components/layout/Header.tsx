@@ -100,20 +100,19 @@ export function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative h-10 w-36">
+          <Link href="/" className="flex items-center space-x-2.5 group">
+            <div className="relative h-10 w-10 shrink-0">
               <Image
-                src={
-                  resolvedTheme === "dark"
-                    ? "/assets/img/logo_white.png"
-                    : "/assets/img/logo.png"
-                }
+                src="/assets/img/logo_square.png"
                 alt="CareFlow AI"
                 fill
                 priority
-                className="object-contain object-left"
+                className="object-contain"
               />
             </div>
+            <span className="text-xl font-extrabold text-slate-900 dark:text-white tracking-tight group-hover:text-[#06635d] dark:group-hover:text-teal-400 transition-colors">
+              CareFlow
+            </span>
           </Link>
 
           {/* Desktop Nav Links */}
