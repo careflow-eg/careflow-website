@@ -113,21 +113,21 @@ export function PlatformOverview() {
                       Clinical Efficiency Metrics
                     </span>
                     <span className="text-[10px] bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 px-2 py-0.5 rounded font-mono">
-                      Real-Time Data
+                      Platform Capability
                     </span>
                   </div>
                   <div className="grid grid-cols-3 gap-2 pt-1 text-center">
                     <div className="p-2 rounded bg-slate-50 dark:bg-[#06171a]">
-                      <div className="text-lg font-bold text-slate-900 dark:text-white">65%</div>
-                      <div className="text-[10px] text-slate-500 dark:text-slate-400">Faster Notes</div>
+                      <div className="text-lg font-bold text-slate-900 dark:text-white">3</div>
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400">Modalities Fused</div>
                     </div>
                     <div className="p-2 rounded bg-slate-50 dark:bg-[#06171a]">
-                      <div className="text-lg font-bold text-slate-900 dark:text-white">99.2%</div>
-                      <div className="text-[10px] text-slate-500 dark:text-slate-400">OCR Accuracy</div>
+                      <div className="text-lg font-bold text-slate-900 dark:text-white">9</div>
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400">AI Models</div>
                     </div>
                     <div className="p-2 rounded bg-slate-50 dark:bg-[#06171a]">
-                      <div className="text-lg font-bold text-slate-900 dark:text-white">&lt; 3s</div>
-                      <div className="text-[10px] text-slate-500 dark:text-slate-400">CDS Latency</div>
+                      <div className="text-lg font-bold text-slate-900 dark:text-white">&lt; 1s</div>
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400">Dashboard Synthesis</div>
                     </div>
                   </div>
                 </div>

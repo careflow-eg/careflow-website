@@ -98,7 +98,7 @@ export function Hero() {
           >
             <div className="flex items-center space-x-1.5">
               <CheckCircle2 className="w-4 h-4 text-teal-500" />
-              <span>HIPAA Compliant</span>
+              <span>PDPL Aligned</span>
             </div>
             <div className="flex items-center space-x-1.5">
               <CheckCircle2 className="w-4 h-4 text-teal-500" />

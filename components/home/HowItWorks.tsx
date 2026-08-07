@@ -49,7 +49,7 @@ export function HowItWorks() {
       step: "06",
       icon: LayoutDashboard,
       title: "Doctor Dashboard",
-      desc: "Physician reviews structured summary and completes visit in 50% less time.",
+      desc: "Physician opens the visit with the history already taken and the results already read.",
     },
   ];
 
