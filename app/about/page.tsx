@@ -82,20 +82,20 @@ export default function AboutPage() {
           {/* Stats Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40">
-              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">100k+</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Patient Intakes</div>
+              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">3</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Modalities Unified</div>
             </div>
             <div className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40">
-              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">50%</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Time Saved per Visit</div>
+              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">9</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Specialised AI Models</div>
             </div>
             <div className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40">
-              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">99.2%</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Lab OCR Accuracy</div>
+              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">عربى</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Egyptian Dialect Intake</div>
             </div>
             <div className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40">
-              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">100%</div>
-              <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">HIPAA Compliant</div>
+              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">PDPL</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Law 151/2020 Aligned</div>
             </div>
           </div>
         </div>

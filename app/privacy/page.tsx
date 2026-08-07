@@ -26,14 +26,15 @@ export default function PrivacyPage() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white">2. Data Handling &amp; HIPAA Compliance</h2>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white">2. Data Handling &amp; Regulatory Alignment</h2>
             <p>
-              All Protected Health Information (PHI) processed through CareFlow platforms adheres strictly to HIPAA (Health Insurance Portability and Accountability Act) and GDPR (General Data Protection Regulation) data protection standards.
+              CareFlow operates in Egypt. Our handling of patient data is designed around Egypt&apos;s Personal Data Protection Law (Law 151/2020), with reference to GDPR principles where they are stricter. We do not claim certification under any framework we have not been audited against.
             </p>
             <ul className="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-400">
-              <li>Data in transit is encrypted using industry-standard TLS 1.3 encryption.</li>
-              <li>Data at rest is secured with AES-256 encryption.</li>
-              <li>Patient clinical information is never disclosed to unauthorized third parties or used for commercial AI training.</li>
+              <li>Data in transit is encrypted using TLS 1.3.</li>
+              <li>Uploaded lab documents pass through a masking pipeline that removes patient-identifying regions before the image is sent to any third-party model.</li>
+              <li>Patient clinical information is never sold, disclosed to unauthorised third parties, or used to train public AI models.</li>
+              <li>Formal independent security certification is on our roadmap and has not yet been completed.</li>
             </ul>
           </div>
 

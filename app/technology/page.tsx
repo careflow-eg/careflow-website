@@ -112,10 +112,10 @@ export default function TechnologyPage() {
                 <Lock className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                HIPAA &amp; Zero Data Retention Security
+                PII Masking Before Inference
               </h3>
               <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                All patient data in transit is encrypted with TLS 1.3, and at rest with AES-256. Patient data is never used to train public LLM models or stored outside compliant clinical boundaries.
+                Uploaded lab documents pass through a masking pipeline that detects and blacks out patient-identifying regions before the image reaches any third-party model. Our data handling is designed around Egypt&apos;s Personal Data Protection Law (Law 151/2020).
               </p>
             </div>
 

@@ -175,7 +175,7 @@ export function Footer() {
                     href="/faq"
                     className="hover:text-teal-400 transition-colors"
                   >
-                    Security &amp; HIPAA FAQ
+                    Security &amp; Data Protection FAQ
                   </Link>
                 </li>
                 <li>
