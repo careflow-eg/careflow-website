@@ -15,6 +15,10 @@ import {
 } from "lucide-react";
 import { CTA } from "@/components/home/CTA";
 import { ChatDemo } from "@/components/features/ChatDemo";
+import { LabDemo } from "@/components/features/LabDemo";
+import { RadiologyDemo } from "@/components/features/RadiologyDemo";
+import { DashboardDemo } from "@/components/features/DashboardDemo";
+import { AssistantDemo } from "@/components/features/AssistantDemo";
 import { AnimatedSection } from "@/components/layout/AnimatedWrapper";
 
 export const metadata = {
@@ -102,28 +106,7 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="rounded-2xl p-6 bg-white dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 shadow-xl space-y-4">
-                <div className="flex items-center justify-between border-b border-slate-100 dark:border-teal-950 pb-3 text-xs font-semibold text-slate-600 dark:text-teal-400">
-                  <span>Lab OCR &amp; Standardized Panel</span>
-                  <span className="bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded text-[10px]">Identifiers masked, then read</span>
-                </div>
-                <div className="space-y-2 text-xs">
-                  <div className="flex justify-between items-center p-2.5 rounded bg-slate-50 dark:bg-[#06171a] border border-slate-100 dark:border-teal-950">
-                    <div>
-                      <div className="font-semibold text-slate-900 dark:text-white">Hemoglobin A1c</div>
-                      <div className="text-[10px] text-slate-400">Reference: &lt; 5.7 %</div>
-                    </div>
-                    <span className="font-bold text-rose-500 bg-rose-50 dark:bg-rose-950/60 px-2 py-1 rounded">8.4 % (High)</span>
-                  </div>
-                  <div className="flex justify-between items-center p-2.5 rounded bg-slate-50 dark:bg-[#06171a] border border-slate-100 dark:border-teal-950">
-                    <div>
-                      <div className="font-semibold text-slate-900 dark:text-white">Serum Creatinine</div>
-                      <div className="text-[10px] text-slate-400">Reference: 0.7 - 1.3 mg/dL</div>
-                    </div>
-                    <span className="font-bold text-amber-500 bg-amber-50 dark:bg-amber-950/60 px-2 py-1 rounded">1.6 mg/dL (Elevated)</span>
-                  </div>
-                </div>
-              </div>
+              <LabDemo />
             </div>
 
             <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
@@ -190,21 +173,7 @@ export default function FeaturesPage() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="rounded-2xl p-6 bg-[#0b1f24] border border-teal-900/40 shadow-2xl space-y-3">
-                <div className="flex items-center justify-between text-xs text-indigo-300 font-semibold border-b border-teal-950 pb-2">
-                  <span>Chest Radiograph (AP View) AI Analysis</span>
-                  <span className="text-teal-400 font-mono">radiology #8491</span>
-                </div>
-                <div className="p-4 rounded-xl bg-[#06171a] border border-teal-950 space-y-2">
-                  <div className="flex justify-between text-xs text-slate-200">
-                    <span className="font-semibold">Primary Finding:</span>
-                    <span className="text-amber-400 font-semibold">Right Middle Lobe Infiltrate</span>
-                  </div>
-                  <div className="text-xs text-slate-400 leading-relaxed">
-                    Dense airspace opacification noted in the right mid-lung zone consistent with lobar consolidation. Pleural space is clear.
-                  </div>
-                </div>
-              </div>
+              <RadiologyDemo />
             </div>
           </div>
         </div>
@@ -215,22 +184,7 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="rounded-2xl p-6 bg-[#0b1f24] border border-teal-900/40 shadow-2xl space-y-4">
-                <div className="flex items-center justify-between border-b border-teal-950 pb-3 text-xs text-teal-400 font-semibold">
-                  <span>Unified Physician Dashboard</span>
-                  <span className="text-slate-400">Patient: John Doe (45M)</span>
-                </div>
-                <div className="space-y-2 text-xs text-slate-300">
-                  <div className="p-3 rounded-lg bg-[#06171a] border border-teal-950">
-                    <span className="font-bold text-white block mb-1">Ranked Differential Diagnoses:</span>
-                    <ol className="list-decimal list-inside space-y-1 text-slate-300">
-                      <li>Bacterial Community-Acquired Pneumonia (87%)</li>
-                      <li>Acute Bronchitis (12%)</li>
-                      <li>Pulmonary Embolism (Low probability)</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
+              <DashboardDemo />
             </div>
 
             <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
@@ -297,21 +251,7 @@ export default function FeaturesPage() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="rounded-2xl p-6 bg-[#0b1f24] border border-teal-900/40 shadow-2xl space-y-4">
-                <div className="flex items-center space-x-2 text-xs text-emerald-400 font-semibold border-b border-teal-950 pb-2">
-                  <Bot className="w-4 h-4" />
-                  <span>Physician Assistant Consultation</span>
-                </div>
-                <div className="space-y-2 text-xs text-slate-200">
-                  <div className="bg-[#06171a] p-3 rounded-lg border border-teal-950">
-                    <span className="font-semibold text-teal-400">Doctor Prompt:</span> &quot;Recommend empirical antibiotic regimen for moderate CAP in a patient with a penicillin allergy.&quot;
-                  </div>
-                  <div className="bg-teal-950/80 p-3 rounded-lg border border-teal-800 text-teal-200 space-y-1">
-                    <span className="font-bold text-white block">CareFlow Assistant Answer:</span>
-                    <p>Per WHO and NICE guidance, for patients with severe penicillin allergy, recommended outpatient empirical options include respiratory fluoroquinolones (Levofloxacin 750mg QD or Moxifloxacin 400mg QD) or Doxycycline 100mg BID.</p>
-                  </div>
-                </div>
-              </div>
+              <AssistantDemo />
             </div>
           </div>
         </div>
