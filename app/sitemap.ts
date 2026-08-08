@@ -1,7 +1,9 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://careflowai.health";
+  // Same source as metadataBase in app/layout.tsx, so canonical URLs, Open Graph
+  // tags and the sitemap cannot disagree about which host this deployment is.
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://careflowai.health";
 
   const routes = [
     "",
