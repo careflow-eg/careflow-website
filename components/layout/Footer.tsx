@@ -30,7 +30,7 @@ export function Footer() {
           {/* Brand & Contact Section */}
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="relative h-10 w-[165px]">
+              <div className="relative w-[168px] h-8">
                 <Image
                   src="/assets/img/logo_white.png"
                   alt="CareFlow AI Platform"
@@ -41,7 +41,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-md">
-              CareFlow is an AI Clinical Assistant that empowers healthcare providers by automating clinical documentation, structuring patient history, analyzing lab &amp; radiology reports, and delivering actionable decision support.
+              CareFlow is a clinical AI ecosystem for Egypt&apos;s independent clinics. It takes the patient&apos;s history by voice in Egyptian Arabic, reads their laboratory reports and radiology images, and gives the doctor one evidence-backed dashboard before the consultation begins.
             </p>
 
             <div className="space-y-3 pt-2">
@@ -49,7 +49,7 @@ export function Footer() {
                 <div className="p-2 rounded-lg bg-teal-950/60 text-teal-400 border border-teal-800/40">
                   <MapPin className="w-4 h-4" />
                 </div>
-                <span>CareFlow Medical Center, 1 Health Plaza</span>
+                <span>Cairo, Egypt</span>
               </div>
               <div className="flex items-center space-x-3 text-sm text-slate-300">
                 <div className="p-2 rounded-lg bg-teal-950/60 text-teal-400 border border-teal-800/40">
@@ -69,10 +69,10 @@ export function Footer() {
           <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
             {/* Column 1: Platform */}
             <div className="space-y-4">
-              <h4 className="text-white font-semibold text-sm tracking-wider uppercase flex items-center gap-2">
+              <h2 className="text-white font-semibold text-sm tracking-wider uppercase flex items-center gap-2">
                 <Activity className="w-4 h-4 text-teal-400" />
                 Platform
-              </h4>
+              </h2>
               <ul className="space-y-2.5 text-sm">
                 <li>
                   <Link
@@ -100,6 +100,22 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
+                    href="/pricing"
+                    className="hover:text-teal-400 transition-colors"
+                  >
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/for-clinics"
+                    className="hover:text-teal-400 transition-colors"
+                  >
+                    For Clinics
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/about"
                     className="hover:text-teal-400 transition-colors"
                   >
@@ -111,10 +127,10 @@ export function Footer() {
 
             {/* Column 2: Portals & Help */}
             <div className="space-y-4">
-              <h4 className="text-white font-semibold text-sm tracking-wider uppercase flex items-center gap-2">
+              <h2 className="text-white font-semibold text-sm tracking-wider uppercase flex items-center gap-2">
                 <Stethoscope className="w-4 h-4 text-teal-400" />
                 Specialists & Portals
-              </h4>
+              </h2>
               <ul className="space-y-2.5 text-sm">
                 <li>
                   <a
@@ -149,11 +165,19 @@ export function Footer() {
 
             {/* Column 3: Trust & Legal */}
             <div className="space-y-4 col-span-2 sm:col-span-1">
-              <h4 className="text-white font-semibold text-sm tracking-wider uppercase flex items-center gap-2">
+              <h2 className="text-white font-semibold text-sm tracking-wider uppercase flex items-center gap-2">
                 <Shield className="w-4 h-4 text-teal-400" />
                 Trust &amp; Legal
-              </h4>
+              </h2>
               <ul className="space-y-2.5 text-sm">
+                <li>
+                  <Link
+                    href="/security"
+                    className="hover:text-teal-400 transition-colors"
+                  >
+                    Security &amp; Data Protection
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="/privacy"

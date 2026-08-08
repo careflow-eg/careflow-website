@@ -13,17 +13,39 @@ import {
   Sparkles,
 } from "lucide-react";
 
+/**
+ * Each card carries a small preview of what that engine actually returns.
+ * These are drawn in markup rather than shipped as imagery — the shapes are
+ * real output shapes, they weigh nothing, and they stay sharp at any density.
+ */
+type Preview = { label: string; value: string; tone?: "flag" | "ok" | "muted" }[];
+
 export function KeyFeatures() {
-  const features = [
+  const features: {
+    id: string;
+    icon: typeof MessageSquare;
+    title: string;
+    tagline: string;
+    description: string;
+    benefits: string[];
+    color: string;
+    preview: Preview;
+  }[] = [
     {
       id: "history-taking",
       icon: MessageSquare,
       title: "AI History Taking",
       tagline: "Voice & Conversational Patient Intake",
       description:
-        "Gathers comprehensive patient history prior to consultation. Adapts questions dynamically based on clinical guidelines and chief complaints.",
-      benefits: ["Multilingual Voice Support", "Structured HPI Output", "Guideline Compliance"],
-      color: "from-teal-500/10 to-teal-500/5 text-teal-600 dark:text-teal-400 border-teal-200 dark:border-teal-900/40",
+        "The patient answers by voice in colloquial Egyptian Arabic while they wait. Each follow-up question is written from what they have already said, and the interview stops when enough clinical ground has been covered.",
+      benefits: ["Egyptian Arabic Voice", "Structured HPI Output", "Asks Until It Has Enough"],
+      color:
+        "from-teal-500/10 to-teal-500/5 text-teal-600 dark:text-teal-400 border-teal-200 dark:border-teal-900/40",
+      preview: [
+        { label: "Asked", value: "الألم بدأ إمتى؟", tone: "muted" },
+        { label: "Onset", value: "3 days ago" },
+        { label: "Character", value: "Sharp, pleuritic" },
+      ],
     },
     {
       id: "lab-interpretation",
@@ -31,19 +53,31 @@ export function KeyFeatures() {
       title: "Laboratory Interpretation",
       tagline: "OCR Extraction & Abnormal Flagging",
       description:
-        "Transforms messy paper & PDF lab reports into clean digital panels. Flags critical values and compares against historical patient baselines.",
-      benefits: ["99%+ OCR Precision", "Trend Analysis", "Critical Alerts"],
-      color: "from-blue-500/10 to-blue-500/5 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-900/40",
+        "Photograph a lab sheet and get back test name, value, unit, reference range and flag as structured data. Patient-identifying details are masked before the document reaches any model.",
+      benefits: ["Values, Units and Flags", "Trend Analysis", "Critical Alerts"],
+      color:
+        "from-blue-500/10 to-blue-500/5 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-900/40",
+      preview: [
+        { label: "Patient name", value: "masked", tone: "muted" },
+        { label: "WBC", value: "14.2 ×10⁹/L", tone: "flag" },
+        { label: "Haemoglobin", value: "13.8 g/dL", tone: "ok" },
+      ],
     },
     {
       id: "radiology-interpretation",
       icon: FileCheck2,
       title: "Radiology Interpretation",
-      tagline: "AI Diagnostic Visual Insights",
+      tagline: "Structured Findings From the Image",
       description:
-        "Analyzes X-rays, CT scans, and MRIs to extract radiological findings, correlate with history, and highlight regions of interest.",
-      benefits: ["DICOM Integration", "Heatmap Overlay", "Correlates Labs + Imaging"],
-      color: "from-indigo-500/10 to-indigo-500/5 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-900/40",
+        "Reads an uploaded X-ray, CT or MRI and returns modality, body part, findings, abnormalities and a written impression as structured data, ready to correlate against the history and the labs.",
+      benefits: ["X-ray, CT and MRI", "Modality and Region", "Correlates Labs + Imaging"],
+      color:
+        "from-indigo-500/10 to-indigo-500/5 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-900/40",
+      preview: [
+        { label: "Modality", value: "MRI" },
+        { label: "Body part", value: "Brain" },
+        { label: "Finding", value: "Right frontal lobe lesion", tone: "flag" },
+      ],
     },
     {
       id: "clinical-dashboard",
@@ -51,19 +85,31 @@ export function KeyFeatures() {
       title: "Clinical Dashboard",
       tagline: "Unified Timeline & Differential Diagnosis",
       description:
-        "Provides doctors with a 360-degree patient timeline, symptoms correlation, differential diagnosis ranking, and evidence-based treatment suggestions.",
+        "One screen with the chronological timeline, laboratory and radiology insights, cross-source correlations, emergency red flags, and ranked differentials — each showing what supports it, what argues against it, and what is still missing.",
       benefits: ["One-Click Summary", "Ranked Differentials", "Evidence-Based RAG"],
-      color: "from-[#06635d]/10 to-[#06635d]/5 text-[#06635d] dark:text-teal-400 border-teal-300 dark:border-teal-800/40",
+      color:
+        "from-[#06635d]/10 to-[#06635d]/5 text-[#06635d] dark:text-teal-400 border-teal-300 dark:border-teal-800/40",
+      preview: [
+        { label: "Red flag", value: "Hypoxia on room air", tone: "flag" },
+        { label: "Ranked 1st", value: "Community-acquired pneumonia" },
+        { label: "Still missing", value: "Sputum culture", tone: "muted" },
+      ],
     },
     {
       id: "physician-assistant",
       icon: Bot,
       title: "AI Physician Assistant",
-      tagline: "Conversational Copilot for Doctors",
+      tagline: "Assistant Grounded in the Patient File",
       description:
-        "An on-demand clinical chatbot that answers queries, references latest medical literature, checks drug interactions, and drafts clinical notes.",
-      benefits: ["Instant Q&A", "Drug Interaction Checks", "SOAP Note Generation"],
-      color: "from-emerald-500/10 to-emerald-500/5 text-emerald-600 dark:text-emerald-400 border-emerald-200 dark:border-emerald-900/40",
+        "Ask a question in plain language and get an answer drawn only from that patient’s own file, returned with the exact source snippet and a confidence score. Drafts visit notes, referral letters and insurance reports from what the system already holds.",
+      benefits: ["Answers From the File Only", "Shows Its Source", "Visit Notes and Letters"],
+      color:
+        "from-emerald-500/10 to-emerald-500/5 text-emerald-600 dark:text-emerald-400 border-emerald-200 dark:border-emerald-900/40",
+      preview: [
+        { label: "Asked", value: "Any renal impairment?", tone: "muted" },
+        { label: "Answer", value: "Creatinine 1.6 mg/dL", tone: "flag" },
+        { label: "Source", value: "Lab report, 2 Aug" },
+      ],
     },
   ];
 
@@ -123,6 +169,34 @@ export function KeyFeatures() {
                       <div key={bIdx} className="flex items-center space-x-2 text-xs text-slate-500 dark:text-slate-400">
                         <div className="w-1.5 h-1.5 rounded-full bg-teal-500" />
                         <span>{b}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 rounded-xl bg-slate-50 dark:bg-[#061518] border border-slate-200 dark:border-teal-900/40 p-3 space-y-1.5">
+                    <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                      What it returns
+                    </div>
+                    {item.preview.map((row) => (
+                      <div
+                        key={row.label}
+                        className="flex items-baseline justify-between gap-3 text-[11px]"
+                      >
+                        <span className="text-slate-500 dark:text-slate-400 shrink-0">
+                          {row.label}
+                        </span>
+                        <span
+                          className={[
+                            "font-semibold text-right leading-snug",
+                            row.tone === "flag"
+                              ? "text-amber-700 dark:text-amber-400"
+                              : row.tone === "muted"
+                                ? "text-slate-400 dark:text-slate-500 italic"
+                                : "text-slate-800 dark:text-slate-100",
+                          ].join(" ")}
+                        >
+                          {row.value}
+                        </span>
                       </div>
                     ))}
                   </div>

@@ -2,15 +2,16 @@ import React from "react";
 import Metadata from "next";
 
 export const metadata = {
-  title: "Privacy Policy | CareFlow AI",
-  description: "CareFlow AI Privacy Policy and Healthcare Data Protection Guidelines.",
+  title: "Privacy Policy",
+  description: "How CareFlow handles patient data, designed around Egypt's Personal Data Protection Law (Law 151/2020), including PII masking before third-party inference.",
 };
 
 export default function PrivacyPage() {
   return (
     <div className="pt-28 pb-20">
-      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center">
-        <div className="max-w-4xl mx-auto px-4 space-y-4">
+      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 space-y-4 relative z-10">
           <h1 className="text-4xl font-extrabold text-white">Privacy Policy</h1>
           <p className="text-slate-400 text-sm">Last updated: July 2026</p>
         </div>

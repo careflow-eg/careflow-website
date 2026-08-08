@@ -4,9 +4,9 @@ import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTA } from "@/components/home/CTA";
 
 export const metadata = {
-  title: "Frequently Asked Questions (FAQ) | CareFlow AI",
+  title: "Frequently Asked Questions",
   description:
-    "Find answers to common questions regarding CareFlow AI platform capabilities, data protection, EHR integration, and Arabic language support.",
+    "Answers on how CareFlow works in an Egyptian clinic: Arabic voice intake, laboratory and radiology reading, data protection under Law 151/2020, and what it costs.",
 };
 
 export default function FAQPage() {
@@ -14,7 +14,7 @@ export default function FAQPage() {
     {
       question: "What is CareFlow?",
       answer:
-        "CareFlow is a connected AI Clinical Assistant platform designed for medical clinics and physicians. It automates clinical documentation, gathers structured patient history via voice/text intake, performs OCR extraction on lab reports, analyzes radiology imaging, and presents a unified clinical decision support dashboard to doctors.",
+        "CareFlow is a clinical AI ecosystem built for Egyptian outpatient clinics. It automates clinical documentation, gathers structured patient history via voice/text intake, performs OCR extraction on lab reports, analyzes radiology imaging, and presents a unified clinical decision support dashboard to doctors.",
     },
     {
       question: "How is patient data protected?",
@@ -46,8 +46,9 @@ export default function FAQPage() {
   return (
     <div className="pt-28 pb-20">
       {/* Header */}
-      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative">
-        <div className="max-w-4xl mx-auto px-4 space-y-4">
+      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 space-y-4 relative z-10">
           <span className="inline-block mb-4 text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
             Platform Help Center
           </span>

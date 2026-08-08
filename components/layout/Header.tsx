@@ -41,6 +41,7 @@ export function Header() {
     { href: "/features", label: "Features" },
     { href: "/how-it-works", label: "How It Works" },
     { href: "/technology", label: "AI Tech" },
+    { href: "/pricing", label: "Pricing" },
     { href: "/about", label: "About" },
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact" },
@@ -67,7 +68,7 @@ export function Header() {
           </div>
           <div className="flex items-center space-x-4">
             <span className="hidden md:inline-block text-slate-400">
-              Connected AI Clinical Care Platform
+              A Clinical AI Ecosystem for Egypt's Clinics
             </span>
             <button
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
@@ -101,7 +102,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative h-10 w-[165px]">
+            <div className="relative w-[168px] h-8">
               <Image
                 src={
                   resolvedTheme === "dark"

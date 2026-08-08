@@ -4,17 +4,18 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { MapPin, Mail, Clock, ShieldCheck } from "lucide-react";
 
 export const metadata = {
-  title: "Contact CareFlow AI | Request a Demo",
+  title: "Book a Demonstration",
   description:
-    "Get in touch with CareFlow AI. Contact our clinical deployment team or request a 1-on-1 platform demonstration for your practice.",
+    "See CareFlow run on a real patient in your own clinic. Book a demonstration or ask us anything about pricing, privacy or how it fits your practice.",
 };
 
 export default function ContactPage() {
   return (
     <div className="pt-28 pb-20">
       {/* Header */}
-      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative">
-        <div className="max-w-4xl mx-auto px-4 space-y-4">
+      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 space-y-4 relative z-10">
           <span className="inline-block mb-4 text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
             Contact &amp; Deployment
           </span>
@@ -49,7 +50,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white text-sm">Medical Center Address</h3>
-                    <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">CareFlow Medical Center, 1 Health Plaza</p>
+                    <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">Cairo, Egypt</p>
                   </div>
                 </div>
 

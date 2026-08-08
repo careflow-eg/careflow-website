@@ -31,7 +31,7 @@ export function HowItWorks() {
       step: "03",
       icon: FileSearch,
       title: "Radiology Scans",
-      desc: "Imaging AI extracts key diagnostic findings & DICOM overlays.",
+      desc: "Imaging AI extracts key diagnostic findings & region overlays.",
     },
     {
       step: "04",
@@ -85,7 +85,7 @@ export function HowItWorks() {
                   <div className="w-12 h-12 rounded-xl bg-[#06635d] dark:bg-teal-500 text-white dark:text-[#021418] flex items-center justify-center font-bold shadow-md shadow-teal-900/20">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-2xl font-black text-slate-300 dark:text-teal-950 font-mono">
+                  <span className="text-2xl font-bold text-slate-500 dark:text-teal-600 font-mono">
                     {item.step}
                   </span>
                 </div>
