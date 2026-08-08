@@ -2,6 +2,7 @@ import React from "react";
 import Metadata from "next";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { MapPin, Mail, Clock, ShieldCheck } from "lucide-react";
+import { AnimatedSection, AnimatedCard } from "@/components/layout/AnimatedWrapper";
 
 export const metadata = {
   title: "Book a Demonstration",
@@ -29,7 +30,7 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-20 bg-white dark:bg-[#021418]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Contact Information Column */}
@@ -44,37 +45,37 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-6">
-                <div className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40">
-                  <div className="p-3 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 shrink-0">
+                <AnimatedCard delay={0.1} className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 hover:border-teal-400/50 group">
+                  <div className="p-3 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 shrink-0 group-hover:scale-110 transition-transform">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 dark:text-white text-sm">Medical Center Address</h3>
+                    <h3 className="font-bold text-slate-900 dark:text-white text-sm group-hover:text-teal-400 transition-colors">Medical Center Address</h3>
                     <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">Cairo, Egypt</p>
                   </div>
-                </div>
+                </AnimatedCard>
 
-                <div className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40">
-                  <div className="p-3 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 shrink-0">
+                <AnimatedCard delay={0.2} className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 hover:border-teal-400/50 group">
+                  <div className="p-3 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 shrink-0 group-hover:scale-110 transition-transform">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 dark:text-white text-sm">Email Inquiries</h3>
+                    <h3 className="font-bold text-slate-900 dark:text-white text-sm group-hover:text-teal-400 transition-colors">Email Inquiries</h3>
                     <a href="mailto:info@careflowai.health" className="text-xs text-teal-600 dark:text-teal-400 hover:underline mt-1 block">
                       info@careflowai.health
                     </a>
                   </div>
-                </div>
+                </AnimatedCard>
 
-                <div className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40">
-                  <div className="p-3 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 shrink-0">
+                <AnimatedCard delay={0.3} className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 hover:border-teal-400/50 group">
+                  <div className="p-3 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 shrink-0 group-hover:scale-110 transition-transform">
                     <Clock className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 dark:text-white text-sm">Support Availability</h3>
+                    <h3 className="font-bold text-slate-900 dark:text-white text-sm group-hover:text-teal-400 transition-colors">Support Availability</h3>
                     <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">24/7 Clinical Emergency Support</p>
                   </div>
-                </div>
+                </AnimatedCard>
               </div>
             </div>
 
@@ -84,7 +85,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ShieldCheck, EyeOff, Lock, ServerCog, FileCheck2, AlertTriangle } from "lucide-react";
 import { CTA } from "@/components/home/CTA";
+import { AnimatedSection, AnimatedCard } from "@/components/layout/AnimatedWrapper";
 
 export const metadata = {
   title: "Security and Data Protection",
@@ -58,19 +59,20 @@ export default function SecurityPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-20 bg-white dark:bg-[#021418]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          {PILLARS.map(({ icon: Icon, title, body, proof }) => (
-            <div
+          {PILLARS.map(({ icon: Icon, title, body, proof }, idx) => (
+            <AnimatedCard
               key={title}
-              className="p-7 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40"
+              delay={idx * 0.15}
+              className="p-7 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 hover:border-teal-400/50 hover:shadow-[0_0_30px_rgba(45,212,191,0.05)] group transition-all"
             >
               <div className="flex items-start gap-4">
-                <div className="w-11 h-11 shrink-0 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 flex items-center justify-center">
+                <div className="w-11 h-11 shrink-0 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="space-y-2.5">
-                  <h2 className="text-xl font-bold text-slate-900 dark:text-white">{title}</h2>
+                  <h2 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-teal-400 transition-colors">{title}</h2>
                   <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{body}</p>
                   {proof && (
                     <p className="text-sm text-[#06635d] dark:text-teal-400 font-semibold leading-relaxed">
@@ -79,13 +81,13 @@ export default function SecurityPage() {
                   )}
                 </div>
               </div>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* What we have not done — stated plainly */}
-      <section className="py-16 bg-slate-50 dark:bg-[#06171a] border-y border-slate-200 dark:border-teal-900/40">
+      <AnimatedSection className="py-16 bg-slate-50 dark:bg-[#06171a] border-y border-slate-200 dark:border-teal-900/40">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-start gap-4 mb-6">
             <div className="w-11 h-11 shrink-0 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400 flex items-center justify-center">
@@ -116,7 +118,7 @@ export default function SecurityPage() {
             ))}
           </ul>
         </div>
-      </section>
+      </AnimatedSection>
 
       <section className="py-16 bg-white dark:bg-[#021418] text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-4">

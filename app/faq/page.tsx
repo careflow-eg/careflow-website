@@ -2,6 +2,7 @@ import React from "react";
 import Metadata from "next";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTA } from "@/components/home/CTA";
+import { AnimatedSection } from "@/components/layout/AnimatedWrapper";
 
 export const metadata = {
   title: "Frequently Asked Questions",
@@ -62,11 +63,11 @@ export default function FAQPage() {
       </section>
 
       {/* Accordion List */}
-      <section className="py-20 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-20 bg-white dark:bg-[#021418]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FAQAccordion items={faqItems} />
         </div>
-      </section>
+      </AnimatedSection>
 
       <CTA />
     </div>

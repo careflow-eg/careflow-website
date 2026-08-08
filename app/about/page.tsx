@@ -11,6 +11,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { CTA } from "@/components/home/CTA";
+import { AnimatedSection, AnimatedCard } from "@/components/layout/AnimatedWrapper";
 
 export const metadata = {
   title: "Mission and Vision",
@@ -38,7 +39,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-20 bg-white dark:bg-[#021418]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -67,7 +68,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 space-y-6">
+            <AnimatedCard delay={0.2} className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 space-y-6 hover:border-teal-400/50 hover:shadow-[0_0_30px_rgba(45,212,191,0.1)] group">
               <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold">
                 <Eye className="w-6 h-6" />
               </div>
@@ -77,30 +78,30 @@ export default function AboutPage() {
               <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
                 We envision a healthcare system where technology operates seamlessly in the background — connecting patient symptoms, laboratory findings, and diagnostic imaging into a single intelligent workspace that supports physicians without intruding on the human therapeutic relationship.
               </p>
-            </div>
+            </AnimatedCard>
           </div>
 
           {/* Stats Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40">
-              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">3</div>
+            <AnimatedCard delay={0.1} className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40 hover:border-teal-400/50 group">
+              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400 group-hover:scale-110 transition-transform">3</div>
               <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Modalities Unified</div>
-            </div>
-            <div className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40">
-              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">9</div>
+            </AnimatedCard>
+            <AnimatedCard delay={0.2} className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40 hover:border-teal-400/50 group">
+              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400 group-hover:scale-110 transition-transform">9</div>
               <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Specialised AI Models</div>
-            </div>
-            <div className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40">
-              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">عربى</div>
+            </AnimatedCard>
+            <AnimatedCard delay={0.3} className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40 hover:border-teal-400/50 group">
+              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400 group-hover:scale-110 transition-transform">عربى</div>
               <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Egyptian Dialect Intake</div>
-            </div>
-            <div className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40">
-              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400">PDPL</div>
+            </AnimatedCard>
+            <AnimatedCard delay={0.4} className="p-6 rounded-2xl bg-teal-50 dark:bg-[#06171a] border border-teal-200 dark:border-teal-900/40 hover:border-teal-400/50 group">
+              <div className="text-3xl font-extrabold text-[#06635d] dark:text-teal-400 group-hover:scale-110 transition-transform">PDPL</div>
               <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold uppercase mt-1">Law 151/2020 Aligned</div>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       <CTA />
     </div>

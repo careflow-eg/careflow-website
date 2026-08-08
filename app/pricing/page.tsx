@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HelpCircle, ShieldCheck, Wallet, RefreshCw } from "lucide-react";
 import { PricingTiers } from "@/components/pricing/PricingTiers";
 import { CTA } from "@/components/home/CTA";
+import { AnimatedSection, AnimatedCard } from "@/components/layout/AnimatedWrapper";
 
 export const metadata = {
   title: "Pricing",
@@ -59,34 +60,34 @@ export default function PricingPage() {
       </section>
 
       {/* Tiers, note and comparison */}
-      <section className="py-16 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-16 bg-white dark:bg-[#021418]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <PricingTiers />
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Reassurance strip */}
-      <section className="py-12 bg-slate-50 dark:bg-[#06171a] border-y border-slate-200 dark:border-teal-900/40">
+      <AnimatedSection className="py-12 bg-slate-50 dark:bg-[#06171a] border-y border-slate-200 dark:border-teal-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             { icon: Wallet, title: "No setup fee", desc: "Nothing to pay before you begin, and no implementation project." },
             { icon: RefreshCw, title: "No contract", desc: "Monthly billing. Change plan or cancel from the portal at any time." },
             { icon: ShieldCheck, title: "Patient data masked", desc: "Identifying details are removed before any document reaches a third-party model." },
             { icon: HelpCircle, title: "Support in Arabic", desc: "Help from people who understand how an Egyptian clinic actually runs." },
-          ].map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 flex items-center justify-center">
+          ].map(({ icon: Icon, title, desc }, idx) => (
+            <AnimatedCard key={title} delay={idx * 0.15} className="space-y-2.5 p-4 rounded-xl hover:bg-[#0b1f24] transition-colors border border-transparent hover:border-teal-900/40 group">
+              <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Icon className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-slate-900 dark:text-white">{title}</h3>
+              <h3 className="font-bold text-slate-900 dark:text-white group-hover:text-teal-400 transition-colors">{title}</h3>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{desc}</p>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Pricing FAQ */}
-      <section className="py-20 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-20 bg-white dark:bg-[#021418]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
             Questions about pricing
@@ -95,14 +96,15 @@ export default function PricingPage() {
             If something here is unclear, ask us directly — we would rather answer than have you guess.
           </p>
           <div className="space-y-4">
-            {FAQ.map(({ q, a }) => (
-              <div
+            {FAQ.map(({ q, a }, idx) => (
+              <AnimatedCard
                 key={q}
-                className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40"
+                delay={idx * 0.1}
+                className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 hover:border-teal-400/30 group"
               >
-                <h3 className="font-bold text-slate-900 dark:text-white mb-2">{q}</h3>
+                <h3 className="font-bold text-slate-900 dark:text-white mb-2 group-hover:text-teal-400 transition-colors">{q}</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{a}</p>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
           <p className="mt-10 text-center text-slate-600 dark:text-slate-400">
@@ -113,7 +115,7 @@ export default function PricingPage() {
             and see it run on a real patient.
           </p>
         </div>
-      </section>
+      </AnimatedSection>
 
       <CTA />
     </div>
