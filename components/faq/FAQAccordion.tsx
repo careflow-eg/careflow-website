@@ -56,7 +56,7 @@ export function FAQAccordion({ items }: { items: FAQItem[] }) {
                 {item.answer}
               </div>
             )}
-          </div>
+          </motion.div>
         );
       })}
     </div>
