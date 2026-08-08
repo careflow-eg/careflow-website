@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 
 export interface FAQItem {
@@ -21,12 +22,16 @@ export function FAQAccordion({ items }: { items: FAQItem[] }) {
       {items.map((item, idx) => {
         const isOpen = openIndex === idx;
         return (
-          <div
+          <motion.div
             key={idx}
-            className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            className={`rounded-2xl border transition-all duration-300 overflow-hidden group ${
               isOpen
-                ? "bg-white dark:bg-[#0b1f24] border-teal-500/50 shadow-md"
-                : "bg-slate-50 dark:bg-[#06171a] border-slate-200 dark:border-teal-900/40 hover:border-slate-300 dark:hover:border-teal-800"
+                ? "bg-white dark:bg-[#0b1f24] border-teal-500/50 shadow-[0_0_30px_rgba(45,212,191,0.1)]"
+                : "bg-slate-50 dark:bg-[#06171a] border-slate-200 dark:border-teal-900/40 hover:border-teal-400/50 hover:shadow-[0_0_20px_rgba(45,212,191,0.05)]"
             }`}
           >
             <button
@@ -34,8 +39,8 @@ export function FAQAccordion({ items }: { items: FAQItem[] }) {
               className="w-full px-6 py-5 text-left flex items-center justify-between space-x-4 focus:outline-none"
             >
               <div className="flex items-center space-x-3">
-                <HelpCircle className="w-5 h-5 text-[#06635d] dark:text-teal-400 shrink-0" />
-                <span className="font-bold text-slate-900 dark:text-white text-base sm:text-lg">
+                <HelpCircle className="w-5 h-5 text-[#06635d] dark:text-teal-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="font-bold text-slate-900 dark:text-white text-base sm:text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                   {item.question}
                 </span>
               </div>

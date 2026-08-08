@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { CTA } from "@/components/home/CTA";
 import { ChatDemo } from "@/components/features/ChatDemo";
+import { AnimatedSection } from "@/components/layout/AnimatedWrapper";
 
 export const metadata = {
   title: "Features",
@@ -45,7 +46,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* Feature 1: AI History Collection */}
-      <section id="history-taking" className="py-20 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-20 bg-white dark:bg-[#021418]" id="history-taking">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
@@ -94,10 +95,10 @@ export default function FeaturesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Feature 2: Laboratory Interpretation */}
-      <section id="lab-interpretation" className="py-20 bg-slate-50 dark:bg-[#061518] border-y border-slate-200 dark:border-teal-950">
+      <AnimatedSection className="py-20 bg-slate-50 dark:bg-[#061518] border-y border-slate-200 dark:border-teal-950" id="lab-interpretation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 order-2 lg:order-1">
@@ -154,10 +155,10 @@ export default function FeaturesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Feature 3: Radiology Interpretation */}
-      <section id="radiology-interpretation" className="py-20 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-20 bg-white dark:bg-[#021418]" id="radiology-interpretation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
@@ -207,10 +208,10 @@ export default function FeaturesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Feature 4: Clinical Dashboard */}
-      <section id="clinical-dashboard" className="py-20 bg-slate-50 dark:bg-[#061518] border-t border-slate-200 dark:border-teal-950">
+      <AnimatedSection className="py-20 bg-slate-50 dark:bg-[#061518] border-t border-slate-200 dark:border-teal-950" id="clinical-dashboard">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 order-2 lg:order-1">
@@ -261,10 +262,10 @@ export default function FeaturesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Feature 5: AI Physician Assistant */}
-      <section id="physician-assistant" className="py-20 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-20 bg-white dark:bg-[#021418]" id="physician-assistant">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
@@ -314,7 +315,7 @@ export default function FeaturesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       <CTA />
     </div>

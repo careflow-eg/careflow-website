@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import { CTA } from "@/components/home/CTA";
 
+import { PipelineArchitecture } from "@/components/technology/PipelineArchitecture";
+
 export const metadata = {
   title: "Technology",
   description:
@@ -41,46 +43,7 @@ export default function TechnologyPage() {
       <section className="py-20 bg-white dark:bg-[#021418]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {/* Architecture Flow Diagram */}
-          <div className="rounded-3xl p-8 bg-slate-900 text-white border border-teal-900/60 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="text-center max-w-2xl mx-auto space-y-2 mb-10">
-              <span className="inline-block mb-4 text-xs font-bold text-teal-400 uppercase tracking-widest">
-                Pipeline Architecture
-              </span>
-              <h2 className="text-2xl font-extrabold text-white">
-                Multi-Stage Clinical Intelligence Engine
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center text-center">
-              <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700 space-y-2">
-                <Brain className="w-6 h-6 text-teal-400 mx-auto" />
-                <div className="font-bold text-sm">1. Intake AI</div>
-                <div className="text-[11px] text-slate-400">Conversational Symptom Extraction</div>
-              </div>
-              <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700 space-y-2">
-                <Layers className="w-6 h-6 text-blue-400 mx-auto" />
-                <div className="font-bold text-sm">2. Lab OCR</div>
-                <div className="text-[11px] text-slate-400">Standardized Lab Panel Structuring</div>
-              </div>
-              <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700 space-y-2">
-                <Cpu className="w-6 h-6 text-indigo-400 mx-auto" />
-                <div className="font-bold text-sm">3. Radiology AI</div>
-                <div className="text-[11px] text-slate-400">Visual Findings &amp; Image Highlights</div>
-              </div>
-              <div className="p-4 rounded-xl bg-teal-950 border border-teal-600 space-y-2">
-                <Database className="w-6 h-6 text-teal-300 mx-auto" />
-                <div className="font-bold text-sm text-teal-300">4. Medical RAG</div>
-                <div className="text-[11px] text-teal-400">Guideline Retrieval &amp; Correlation</div>
-              </div>
-              <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700 space-y-2">
-                <ShieldCheck className="w-6 h-6 text-emerald-400 mx-auto" />
-                <div className="font-bold text-sm">5. Doctor CDS</div>
-                <div className="text-[11px] text-slate-400">Unified Clinical Dashboard</div>
-              </div>
-            </div>
-          </div>
+          <PipelineArchitecture />
 
           {/* Core Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

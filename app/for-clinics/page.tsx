@@ -10,6 +10,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { CTA } from "@/components/home/CTA";
+import { AnimatedSection, AnimatedCard } from "@/components/layout/AnimatedWrapper";
 
 export const metadata = {
   title: "For Clinics",
@@ -128,7 +129,7 @@ export default function ForClinicsPage() {
       </section>
 
       {/* ── The arithmetic ────────────────────────────────────────── */}
-      <section className="py-20 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-20 bg-white dark:bg-[#021418]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-3 mb-10">
             <span className="inline-block text-xs font-bold text-[#06635d] dark:text-teal-400 uppercase tracking-widest bg-teal-50 dark:bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-200 dark:border-teal-900">
@@ -222,10 +223,10 @@ export default function ForClinicsPage() {
             </p>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* ── What the practice shares ──────────────────────────────── */}
-      <section className="py-20 bg-slate-50 dark:bg-[#06171a] border-y border-slate-200 dark:border-teal-900/40">
+      <AnimatedSection className="py-20 bg-slate-50 dark:bg-[#06171a] border-y border-slate-200 dark:border-teal-900/40">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-3 mb-10">
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">
@@ -237,24 +238,25 @@ export default function ForClinicsPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {SHARED.map(({ icon: Icon, title, body }) => (
-              <div
+            {SHARED.map(({ icon: Icon, title, body }, idx) => (
+              <AnimatedCard
                 key={title}
-                className="p-7 rounded-2xl bg-white dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 space-y-3"
+                delay={idx * 0.15}
+                className="p-7 rounded-2xl bg-white dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 space-y-3 hover:border-teal-400/50 hover:shadow-[0_0_30px_rgba(45,212,191,0.1)] group"
               >
                 <div className="w-11 h-11 rounded-xl bg-teal-100 dark:bg-teal-950 text-[#06635d] dark:text-teal-400 flex items-center justify-center">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">{title}</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-400 transition-colors">{title}</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{body}</p>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* ── A visit, end to end ───────────────────────────────────── */}
-      <section className="py-20 bg-white dark:bg-[#021418]">
+      <AnimatedSection className="py-20 bg-white dark:bg-[#021418]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-3 mb-10">
             <span className="inline-block text-xs font-bold text-[#06635d] dark:text-teal-400 uppercase tracking-widest bg-teal-50 dark:bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-200 dark:border-teal-900">
@@ -270,9 +272,10 @@ export default function ForClinicsPage() {
 
           <div className="space-y-4">
             {DAY.map((s, i) => (
-              <div
+              <AnimatedCard
                 key={s.title}
-                className="flex flex-col sm:flex-row gap-5 p-6 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40"
+                delay={i * 0.15}
+                className="flex flex-col sm:flex-row gap-5 p-6 rounded-2xl bg-slate-50 dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 hover:border-teal-400/30 group"
               >
                 <div className="sm:w-52 shrink-0 flex sm:flex-col items-center sm:items-start gap-3">
                   <div className="w-10 h-10 rounded-xl bg-[#06635d] dark:bg-teal-500 text-white dark:text-[#021418] flex items-center justify-center font-bold text-sm shrink-0">
@@ -289,7 +292,7 @@ export default function ForClinicsPage() {
                     {s.body}
                   </p>
                 </div>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
 
@@ -309,10 +312,10 @@ export default function ForClinicsPage() {
             </p>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* ── Before you buy ────────────────────────────────────────── */}
-      <section className="py-16 bg-slate-50 dark:bg-[#06171a] border-y border-slate-200 dark:border-teal-900/40">
+      <AnimatedSection className="py-16 bg-slate-50 dark:bg-[#06171a] border-y border-slate-200 dark:border-teal-900/40">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-start gap-4 mb-6">
             <div className="w-11 h-11 shrink-0 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400 flex items-center justify-center">
@@ -339,7 +342,7 @@ export default function ForClinicsPage() {
             ))}
           </ul>
         </div>
-      </section>
+      </AnimatedSection>
 
       <CTA />
     </div>

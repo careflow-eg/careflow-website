@@ -103,10 +103,10 @@ export function PricingTiers() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: i * 0.08, ease }}
             className={[
-              "relative rounded-2xl p-7 flex flex-col h-full transition-shadow",
+              "relative rounded-2xl p-7 flex flex-col h-full transition-all duration-300 group",
               tier.featured
-                ? "bg-[#06635d] dark:bg-[#06635d] text-white shadow-2xl shadow-teal-900/25 lg:-mt-4 lg:pb-10 ring-1 ring-teal-400/40"
-                : "bg-white dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-black/20",
+                ? "bg-[#06635d] dark:bg-[#06635d] text-white shadow-2xl shadow-teal-900/25 lg:-mt-4 lg:pb-10 ring-1 ring-teal-400/40 hover:shadow-[0_0_40px_rgba(45,212,191,0.3)] hover:scale-[1.02] z-10"
+                : "bg-white dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-black/20 hover:border-teal-400/50",
             ].join(" ")}
           >
             {tier.featured && (
@@ -236,7 +236,10 @@ export function PricingTiers() {
               {COMPARISON.map((row, ri) => (
                 <tr
                   key={row.label}
-                  className={ri % 2 ? "bg-white dark:bg-[#0b1f24]" : "bg-slate-50/60 dark:bg-[#08191d]"}
+                  className={[
+                    ri % 2 ? "bg-white dark:bg-[#0b1f24]" : "bg-slate-50/60 dark:bg-[#08191d]",
+                    "hover:bg-slate-100 dark:hover:bg-[#0c272d] transition-colors"
+                  ].join(" ")}
                 >
                   <td className="px-5 py-3.5 text-slate-700 dark:text-slate-300">
                     {row.label}
