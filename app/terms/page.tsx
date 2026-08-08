@@ -2,15 +2,16 @@ import React from "react";
 import Metadata from "next";
 
 export const metadata = {
-  title: "Terms of Service | CareFlow AI",
-  description: "Terms of Service for CareFlow AI marketing website and platform.",
+  title: "Terms of Service",
+  description: "The terms governing use of the CareFlow clinical AI ecosystem.",
 };
 
 export default function TermsPage() {
   return (
     <div className="pt-28 pb-20">
-      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center">
-        <div className="max-w-4xl mx-auto px-4 space-y-4">
+      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 space-y-4 relative z-10">
           <h1 className="text-4xl font-extrabold text-white">Terms of Service</h1>
           <p className="text-slate-400 text-sm">Last updated: July 2026</p>
         </div>

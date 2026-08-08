@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Stethoscope,
@@ -37,12 +36,12 @@ export function Hero() {
             className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800/60 text-[#06635d] dark:text-teal-300 text-xs font-semibold uppercase tracking-wider mb-4"
           >
             <Sparkles className="w-3.5 h-3.5 text-teal-500 animate-pulse" />
-            <span>Next-Generation AI Clinical Assistant</span>
+            <span>A Clinical AI Ecosystem</span>
           </motion.div>
 
           {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]"
@@ -55,17 +54,17 @@ export function Hero() {
 
           {/* Subheading */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-normal leading-relaxed"
           >
-            CareFlow automates clinical documentation, extracts structured history, interprets lab &amp; radiology reports, and provides physicians with real-time evidence-based decision support.
+            CareFlow takes the patient&apos;s history by voice in Egyptian Arabic, reads their laboratory reports and radiology images, and gives the doctor one evidence-backed dashboard before the consultation begins.
           </motion.p>
 
           {/* Action CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
@@ -106,7 +105,7 @@ export function Hero() {
             </div>
             <div className="flex items-center space-x-1.5">
               <CheckCircle2 className="w-4 h-4 text-teal-500" />
-              <span>Zero Clinical Delay</span>
+              <span>Ready Before the Consultation</span>
             </div>
           </motion.div>
         </div>
@@ -141,7 +140,7 @@ export function Hero() {
               {/* Mock Content Layout Grid */}
               <div className="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
                 {/* Card 1: History Collection */}
-                <div className="bg-[#0b1f24] rounded-xl p-4 border border-teal-900/40 space-y-3">
+                <div className="bg-[#0b1f24] rounded-xl p-4 border border-teal-900/40 space-y-3 hover:border-teal-500/50 transition-colors duration-300 shadow-lg shadow-teal-900/10 hover:shadow-teal-900/30">
                   <div className="flex items-center justify-between text-xs text-teal-400 font-semibold uppercase tracking-wider">
                     <span className="flex items-center gap-1.5">
                       <Brain className="w-4 h-4 text-teal-300" /> AI Intake Summary
@@ -154,15 +153,15 @@ export function Hero() {
                       &quot;Progressive shortness of breath and pleuritic chest pain for 3 days.&quot;
                     </p>
                     <div className="flex flex-wrap gap-1.5 pt-1">
-                      <span className="bg-teal-950 text-teal-300 px-2 py-0.5 rounded text-[10px]">Dyspnea</span>
-                      <span className="bg-teal-950 text-teal-300 px-2 py-0.5 rounded text-[10px]">Chest Pain</span>
-                      <span className="bg-amber-950 text-amber-300 px-2 py-0.5 rounded text-[10px]">Fever 38.2°C</span>
+                      <span className="bg-teal-950 text-teal-300 px-2 py-0.5 rounded text-[10px] hover:bg-teal-900 transition-colors cursor-default">Dyspnea</span>
+                      <span className="bg-teal-950 text-teal-300 px-2 py-0.5 rounded text-[10px] hover:bg-teal-900 transition-colors cursor-default">Chest Pain</span>
+                      <span className="bg-amber-950 text-amber-300 px-2 py-0.5 rounded text-[10px] hover:bg-amber-900 transition-colors cursor-default">Fever 38.2°C</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Card 2: Lab & Radiology AI */}
-                <div className="bg-[#0b1f24] rounded-xl p-4 border border-teal-900/40 space-y-3">
+                <div className="bg-[#0b1f24] rounded-xl p-4 border border-teal-900/40 space-y-3 hover:border-emerald-500/50 transition-colors duration-300 shadow-lg shadow-teal-900/10 hover:shadow-emerald-900/20">
                   <div className="flex items-center justify-between text-xs text-teal-400 font-semibold uppercase tracking-wider">
                     <span className="flex items-center gap-1.5">
                       <FileCheck2 className="w-4 h-4 text-teal-300" /> Lab &amp; Imaging OCR
@@ -170,15 +169,15 @@ export function Hero() {
                     <span className="text-emerald-400 text-[10px]">Verified</span>
                   </div>
                   <div className="space-y-2 text-xs">
-                    <div className="flex justify-between items-center bg-[#06171a] p-2 rounded-lg border border-teal-950">
+                    <div className="flex justify-between items-center bg-[#06171a] p-2 rounded-lg border border-teal-950 hover:bg-[#082025] transition-colors">
                       <span className="text-slate-300">WBC Count:</span>
                       <span className="font-semibold text-rose-400">14.2 x10³/µL (High)</span>
                     </div>
-                    <div className="flex justify-between items-center bg-[#06171a] p-2 rounded-lg border border-teal-950">
+                    <div className="flex justify-between items-center bg-[#06171a] p-2 rounded-lg border border-teal-950 hover:bg-[#082025] transition-colors">
                       <span className="text-slate-300">Chest X-Ray:</span>
                       <span className="font-semibold text-amber-300">RML Consolidation</span>
                     </div>
-                    <div className="flex justify-between items-center bg-[#06171a] p-2 rounded-lg border border-teal-950">
+                    <div className="flex justify-between items-center bg-[#06171a] p-2 rounded-lg border border-teal-950 hover:bg-[#082025] transition-colors">
                       <span className="text-slate-300">D-Dimer:</span>
                       <span className="font-semibold text-slate-300">0.32 µg/mL (Normal)</span>
                     </div>
@@ -211,7 +210,7 @@ export function Hero() {
                     </div>
                     <p className="text-[10px] text-teal-300/80 pt-1 flex items-center gap-1">
                       <ShieldCheck className="w-3 h-3 text-teal-400" />
-                      Guided by IDSA/ATS Pneumonia Guidelines
+                      Guided by WHO & NICE Pneumonia Guidance
                     </p>
                   </div>
                 </div>

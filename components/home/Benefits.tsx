@@ -15,33 +15,33 @@ export function Benefits() {
   const benefitsList = [
     {
       icon: Clock,
-      title: "Save Up to 2 Hours Daily",
-      desc: "Automated AI history intake and SOAP note pre-drafting reduces physician computer administrative load dramatically.",
+      title: "The History Is Already Taken",
+      desc: "The patient answers in the waiting room, off the consultation clock. You open the visit with it already written up.",
     },
     {
       icon: FileCheck,
       title: "Reduce Documentation Errors",
-      desc: "Standardized OCR and structured clinical data prevent missed lab values, typos, and forgotten symptoms.",
+      desc: "Every lab value is read, flagged and cross-referenced against the history and the scan — not scanned by eye between patients.",
     },
     {
       icon: Zap,
       title: "Faster Clinical Decisions",
-      desc: "Instant differential diagnosis suggestions backed by clinical guidelines let doctors focus on patient care.",
+      desc: "Ranked differentials with the evidence shown, grounded in WHO and NICE guidance and standard reference texts.",
     },
     {
       icon: Smile,
       title: "Better Patient Experience",
-      desc: "Patients feel heard through natural conversational intake, while doctors spend visits making eye contact instead of typing.",
+      desc: "Patients answer in their own dialect and feel properly asked. You spend the visit examining rather than writing.",
     },
     {
       icon: ShieldCheck,
       title: "Evidence-Based RAG Insights",
-      desc: "All AI suggestions cite authoritative medical guidelines (IDSA, ACC, ADA) with zero hallucinations.",
+      desc: "All AI suggestions cite authoritative medical guidelines (WHO, NICE and standard reference texts) with the evidence shown.",
     },
     {
       icon: TrendingUp,
-      title: "Increased Clinic Throughput",
-      desc: "Allows outpatient clinics to serve 30% more patients without increasing clinician burnout or hours.",
+      title: "Work Moved Off the Consultation",
+      desc: "Intake, laboratory reading and image interpretation all happen before the door opens, so the consultation is spent on the patient rather than on their paperwork.",
     },
   ];
 

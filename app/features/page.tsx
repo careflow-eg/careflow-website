@@ -14,11 +14,12 @@ import {
   Zap,
 } from "lucide-react";
 import { CTA } from "@/components/home/CTA";
+import { ChatDemo } from "@/components/features/ChatDemo";
 
 export const metadata = {
-  title: "AI Features & Product Capabilities",
+  title: "Features",
   description:
-    "Explore CareFlow AI capabilities: AI History Collection, Lab Report OCR, Radiology Interpretation, Clinical Dashboards, and AI Physician Assistant.",
+    "Arabic voice history taking, laboratory report extraction with PII masking, radiology interpretation, clinical correlation, red flags, and evidence-backed differentials.",
 };
 
 export default function FeaturesPage() {
@@ -29,12 +30,13 @@ export default function FeaturesPage() {
     <div className="pt-28 pb-20">
       {/* Header Banner */}
       <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 space-y-4">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 space-y-4 relative z-10">
           <span className="inline-block mb-4 text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
             CareFlow Platform Features
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
-            AI Clinical Assistant Suite
+            The Clinical AI Ecosystem
           </h1>
           <p className="text-slate-300 text-lg">
             Purpose-built medical AI modules designed to automate documentation, unify multi-modal health data, and support evidence-based decisions.
@@ -87,17 +89,7 @@ export default function FeaturesPage() {
                   <span>Patient Intake Assistant Demo</span>
                   <span className="bg-teal-950 px-2 py-0.5 rounded text-[10px]">Active Session</span>
                 </div>
-                <div className="space-y-3 text-xs">
-                  <div className="bg-teal-950/60 p-3 rounded-lg border border-teal-900/60 text-teal-200">
-                    <span className="font-bold text-teal-400">CareFlow AI:</span> &quot;How long have you experienced this chest tightness, and does it worsen when taking a deep breath?&quot;
-                  </div>
-                  <div className="bg-slate-800/80 p-3 rounded-lg border border-slate-700 text-slate-200 ml-4">
-                    <span className="font-bold text-slate-300">Patient:</span> &quot;It started 3 days ago. Yes, sharp pain when I inhale deeply.&quot;
-                  </div>
-                  <div className="bg-teal-950/60 p-3 rounded-lg border border-teal-900/60 text-teal-200">
-                    <span className="font-bold text-teal-400">CareFlow AI:</span> &quot;Understood. Have you had any fever, chills, or productive cough recently?&quot;
-                  </div>
-                </div>
+                <ChatDemo />
               </div>
             </div>
           </div>
@@ -112,7 +104,7 @@ export default function FeaturesPage() {
               <div className="rounded-2xl p-6 bg-white dark:bg-[#0b1f24] border border-slate-200 dark:border-teal-900/40 shadow-xl space-y-4">
                 <div className="flex items-center justify-between border-b border-slate-100 dark:border-teal-950 pb-3 text-xs font-semibold text-slate-600 dark:text-teal-400">
                   <span>Lab OCR &amp; Standardized Panel</span>
-                  <span className="bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded text-[10px]">Processed in 1.2s</span>
+                  <span className="bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded text-[10px]">Identifiers masked, then read</span>
                 </div>
                 <div className="space-y-2 text-xs">
                   <div className="flex justify-between items-center p-2.5 rounded bg-slate-50 dark:bg-[#06171a] border border-slate-100 dark:border-teal-950">
@@ -200,7 +192,7 @@ export default function FeaturesPage() {
               <div className="rounded-2xl p-6 bg-[#0b1f24] border border-teal-900/40 shadow-2xl space-y-3">
                 <div className="flex items-center justify-between text-xs text-indigo-300 font-semibold border-b border-teal-950 pb-2">
                   <span>Chest Radiograph (AP View) AI Analysis</span>
-                  <span className="text-teal-400 font-mono">DICOM #8491</span>
+                  <span className="text-teal-400 font-mono">radiology #8491</span>
                 </div>
                 <div className="p-4 rounded-xl bg-[#06171a] border border-teal-950 space-y-2">
                   <div className="flex justify-between text-xs text-slate-200">
@@ -283,7 +275,7 @@ export default function FeaturesPage() {
                 AI Physician Assistant
               </h2>
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                An instant conversational medical copilot. Ask complex clinical questions, verify drug-drug interactions, check guidelines, or request automated SOAP notes.
+                An instant conversational medical copilot. Ask a question in plain language and get an answer drawn only from that patient&apos;s own file, with the exact source snippet and a confidence score. Or request automated SOAP notes.
               </p>
               <div className="space-y-3 pt-2">
                 <div className="flex items-start space-x-3 text-sm text-slate-700 dark:text-slate-200">
@@ -315,7 +307,7 @@ export default function FeaturesPage() {
                   </div>
                   <div className="bg-teal-950/80 p-3 rounded-lg border border-teal-800 text-teal-200 space-y-1">
                     <span className="font-bold text-white block">CareFlow Assistant Answer:</span>
-                    <p>Per IDSA/ATS guidelines, for patients with severe penicillin allergy, recommended outpatient empirical options include respiratory fluoroquinolones (Levofloxacin 750mg QD or Moxifloxacin 400mg QD) or Doxycycline 100mg BID.</p>
+                    <p>Per WHO and NICE guidance, for patients with severe penicillin allergy, recommended outpatient empirical options include respiratory fluoroquinolones (Levofloxacin 750mg QD or Moxifloxacin 400mg QD) or Doxycycline 100mg BID.</p>
                   </div>
                 </div>
               </div>

@@ -13,25 +13,26 @@ import {
 import { CTA } from "@/components/home/CTA";
 
 export const metadata = {
-  title: "AI Technology & Medical RAG Architecture",
+  title: "Technology",
   description:
-    "Discover the AI architecture powering CareFlow: Clinical LLMs, Retrieval-Augmented Generation (RAG), Evidence-Based Reasoning, and Human-in-the-Loop Safety.",
+    "The architecture behind CareFlow: Arabic speech recognition, medical vision-language models, hybrid retrieval over WHO guidance and reference texts, and evidence-first reasoning.",
 };
 
 export default function TechnologyPage() {
   return (
     <div className="pt-28 pb-20">
       {/* Header */}
-      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative">
-        <div className="max-w-4xl mx-auto px-4 space-y-4">
+      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 space-y-4 relative z-10">
           <span className="inline-block mb-4 text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
-            CareFlow AI Core Architecture
+            How CareFlow Works Underneath
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
             Evidence-Based Medical AI
           </h1>
           <p className="text-slate-300 text-lg">
-            Grounded in peer-reviewed clinical guidelines, domain-tuned LLMs, and multi-modal document extraction.
+            Eleven specialised models across thirteen services, tuned for Egyptian Arabic and grounded in published clinical evidence.
           </p>
         </div>
       </section>
@@ -91,7 +92,7 @@ export default function TechnologyPage() {
                 Medical RAG (Retrieval-Augmented Generation)
               </h3>
               <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                Standard LLMs are prone to hallucinating medical facts. CareFlow eliminates hallucination risk by enforcing strict Retrieval-Augmented Generation against validated clinical guidelines (IDSA, ACC, ADA, NCCN). Every suggestion cites exact clinical literature.
+                General-purpose language models invent medical facts. CareFlow constrains its reasoning to retrieved evidence: WHO clinical guidelines, NICE guidance and standard reference texts including Harrison&apos;s, Kumar &amp; Clark, Davidson&apos;s, Macleod&apos;s and the Oxford Textbook of Medicine. Retrieval is hybrid, and a cross-encoder re-ranks results before they reach the reasoning step. Every suggestion carries the evidence it rests on, so you can check it rather than trust it.
               </p>
             </div>
 
@@ -127,7 +128,7 @@ export default function TechnologyPage() {
                 Multi-Modal Diagnostic Fusion
               </h3>
               <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                Combines textual voice intake transcripts, structured lab values, and radiological DICOM images into a single unified clinical context for comprehensive differential diagnosis reasoning.
+                Combines the Arabic voice history, structured laboratory values and the uploaded radiology image into one clinical context, then correlates across all three to produce ranked differentials with the supporting, contradicting and still-missing evidence for each.
               </p>
             </div>
           </div>

@@ -13,17 +13,18 @@ import {
 import { CTA } from "@/components/home/CTA";
 
 export const metadata = {
-  title: "About CareFlow AI | Mission & Vision",
+  title: "Mission and Vision",
   description:
-    "Learn about CareFlow's mission to eliminate administrative burnout for physicians and improve patient outcomes through clinical AI intelligence.",
+    "Why CareFlow exists: giving Egyptian doctors their consultation back by taking the patient's history, reading the labs and reading the scans before the visit begins.",
 };
 
 export default function AboutPage() {
   return (
     <div className="pt-28 pb-20">
       {/* Header */}
-      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative">
-        <div className="max-w-4xl mx-auto px-4 space-y-4">
+      <section className="py-16 bg-[#021418] border-b border-teal-900/40 text-center relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 space-y-4 relative z-10">
           <span className="inline-block mb-4 text-xs font-bold text-teal-400 uppercase tracking-widest bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-800">
             About CareFlow AI
           </span>

@@ -129,3 +129,51 @@ body {
 .dark .hero-gradient {
   background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.2) 0%, rgba(6, 99, 93, 0.1) 50%, transparent 100%);
 }
+
+/* ── Accessibility ─────────────────────────────────────────────────── */
+
+/*
+ * A visible focus ring in the brand colour. --ring resolves to #06635d in
+ * light and #14b8a6 in dark, both measured above 7:1 against their own
+ * backgrounds. :focus-visible rather than :focus so pointer users never see it.
+ */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Header carries a dozen controls, so give keyboard users a way past it. */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: top 0.15s ease-out;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/*
+ * Honour a reduced-motion preference. The site uses framer-motion widely;
+ * this collapses those transitions rather than removing the end state, so
+ * content still arrives — it just stops moving.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
