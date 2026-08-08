@@ -12,7 +12,7 @@ const scans = [
     desc: "Dense airspace opacification noted in the right mid-lung zone consistent with lobar consolidation. Pleural space clear.",
     confidence: "94%",
     severity: "High Clinical Correlation",
-    targetPos: "top-1/3 right-1/4",
+    targetPos: "top-5 right-6",
   },
   {
     id: "ct",
@@ -21,7 +21,7 @@ const scans = [
     desc: "Bilateral peripheral ground-glass infiltrates with minimal interlobular septal thickening.",
     confidence: "91%",
     severity: "Moderate Severity",
-    targetPos: "top-1/2 left-1/3",
+    targetPos: "top-5 left-6",
   },
   {
     id: "mri",
@@ -30,7 +30,7 @@ const scans = [
     desc: "Posterolateral disc protrusion with mild posterior compression on the nerve root.",
     confidence: "97%",
     severity: "High Precision",
-    targetPos: "bottom-1/3 right-1/3",
+    targetPos: "bottom-4 right-6",
   },
 ];
 
@@ -63,20 +63,20 @@ export function RadiologyDemo() {
       </div>
 
       {/* Interactive Scan Canvas Simulation */}
-      <div className="relative h-44 rounded-xl bg-[#031114] border border-teal-950 overflow-hidden flex items-center justify-center group">
+      <div className="relative h-48 rounded-xl bg-[#031114] border border-teal-950 overflow-hidden flex items-center justify-center group">
         {/* Animated Scan Grid Lines */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#06171a_1px,transparent_1px),linear-gradient(to_bottom,#06171a_1px,transparent_1px)] bg-[size:16px_16px] opacity-60" />
 
         {/* Scan Reticle Focus */}
         <motion.div
           key={scan.id}
-          initial={{ scale: 1.5, opacity: 0 }}
+          initial={{ scale: 1.4, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 200, damping: 20 }}
-          className={`absolute ${scan.targetPos} w-24 h-24 rounded-lg border-2 border-dashed border-teal-400/80 bg-teal-400/10 flex items-center justify-center shadow-[0_0_25px_rgba(45,212,191,0.3)] pointer-events-none`}
+          transition={{ type: "spring", stiffness: 220, damping: 22 }}
+          className={`absolute ${scan.targetPos} w-20 h-20 rounded-lg border-2 border-dashed border-teal-400/80 bg-teal-400/10 flex items-center justify-center shadow-[0_0_25px_rgba(45,212,191,0.3)] pointer-events-none z-20`}
         >
-          <Crosshair className="w-6 h-6 text-teal-300 animate-spin" style={{ animationDuration: "12s" }} />
-          <span className="absolute -top-5 bg-teal-950 text-teal-300 text-[9px] font-mono px-1.5 py-0.5 rounded border border-teal-800">
+          <Crosshair className="w-5 h-5 text-teal-300 animate-spin" style={{ animationDuration: "12s" }} />
+          <span className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-teal-950 text-teal-300 text-[10px] font-mono px-2 py-0.5 rounded-full border border-teal-800 shadow-md">
             Target Identified ({scan.confidence})
           </span>
         </motion.div>
