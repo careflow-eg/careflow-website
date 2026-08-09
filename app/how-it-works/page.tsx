@@ -24,7 +24,7 @@ export default function HowItWorksPage() {
             From Patient Intake to Clinical Action
           </h1>
           <p className="text-slate-300 text-lg">
-            CareFlow seamlessly bridges the gap between patient reporting, diagnostic data, and physician decision-making.
+            CareFlow automatically bridges the gap between patient reporting, diagnostic data, and physician decision-making.
           </p>
         </div>
       </section>

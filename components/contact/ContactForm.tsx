@@ -33,8 +33,18 @@ export function ContactForm() {
     setIsSubmitting(true);
     setErrorMessage(null);
     try {
-      // Simulate API form submission delay
-      await new Promise((resolve) => setTimeout(resolve, 1200));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       console.log("Contact form submitted:", data);
       setIsSuccess(true);
       reset();

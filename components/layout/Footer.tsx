@@ -33,7 +33,7 @@ export function Footer() {
               <div className="relative w-[168px] h-8">
                 <Image
                   src="/assets/img/logo_white.png"
-                  alt="CareFlow AI Platform"
+                  alt="CareFlow"
                   fill
                   sizes="(max-width: 768px) 140px, 165px"
                   className="object-contain object-left"
@@ -217,7 +217,7 @@ export function Footer() {
 
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} CareFlow AI Platform. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} CareFlow. All rights reserved.</p>
           <div className="flex items-center space-x-6">
             <Link href="/privacy" className="hover:text-teal-400 transition-colors">
               Privacy Policy
