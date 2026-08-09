@@ -76,7 +76,7 @@ export default function AboutPage() {
                 Our Vision
               </h2>
               <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-                We envision a healthcare system where technology operates seamlessly in the background — connecting patient symptoms, laboratory findings, and diagnostic imaging into a single intelligent workspace that supports physicians without intruding on the human therapeutic relationship.
+                We envision a healthcare system where technology operates quietly in the background — connecting patient symptoms, laboratory findings, and diagnostic imaging into a single intelligent workspace that supports physicians without intruding on the human therapeutic relationship.
               </p>
             </AnimatedCard>
           </div>

@@ -21,7 +21,7 @@ export function CTA() {
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
-            Ready to Supercharge Your Practice with CareFlow AI?
+            Ready to start the consultation warm?
           </h2>
 
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">

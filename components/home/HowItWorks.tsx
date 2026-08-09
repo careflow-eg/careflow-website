@@ -64,7 +64,7 @@ export function HowItWorks() {
             How CareFlow Delivers Connected Care
           </h2>
           <p className="text-slate-600 dark:text-slate-300 text-base">
-            From the moment a patient schedules an appointment to the final doctor sign-off, CareFlow coordinates data seamlessly.
+            From the moment a patient schedules an appointment to the final doctor sign-off, CareFlow coordinates data automatically.
           </p>
         </div>
 

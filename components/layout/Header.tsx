@@ -110,7 +110,7 @@ export function Header() {
                     ? "/assets/img/logo_white.png"
                     : "/assets/img/logo.png"
                 }
-                alt="CareFlow AI"
+                alt="CareFlow"
                 fill
                 sizes="(max-width: 768px) 140px, 165px"
                 priority
