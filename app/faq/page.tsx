@@ -30,7 +30,7 @@ export default function FAQPage() {
     {
       question: "Can CareFlow integrate with our existing EHR / EMR system?",
       answer:
-        "Yes. CareFlow provides seamless integration options via FHIR (Fast Healthcare Interoperability Resources) APIs, REST webhooks, and EHR connectors, allowing SOAP notes and lab summaries to be pushed directly into your electronic health records.",
+        "Not today. CareFlow runs alongside your existing records rather than inside them — the dashboard and history summary can be exported or printed. Direct EHR/EMR integration is not on the near-term roadmap: we built for independent clinics, where it is rarely the blocker. If it is a blocker for you, tell us, because that changes the calculus.",
     },
     {
       question: "Is Arabic language supported for patient intake?",
