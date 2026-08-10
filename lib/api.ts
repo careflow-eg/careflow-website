@@ -1,12 +1,13 @@
 /**
  * Centralized API client for CareFlow Website.
- * Uses base URL: https://api.cairflowai.health
+ * Uses base URL: https://api.cairflowai.health/api/v1
  */
 
 export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.cairflowai.health";
+export const API_PREFIX = process.env.NEXT_PUBLIC_API_PREFIX || "/api/v1";
 
 export async function fetchApi<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-  const url = `${API_BASE_URL.replace(/\/$/, "")}/${endpoint.replace(/^\//, "")}`;
+  const url = `${API_BASE_URL.replace(/\/$/, "")}${API_PREFIX}/${endpoint.replace(/^\//, "")}`;
   const response = await fetch(url, {
     ...options,
     headers: {
