@@ -57,7 +57,7 @@ const TIERS: Tier[] = [
   {
     name: "Clinic",
     price: 149,
-    unit: "per month, up to 5 doctors",
+    unit: "per doctor / month",
     quota: "750 pooled encounters included",
     blurb: "For a practice sharing premises, staff and a patient list.",
     cta: "See it for a practice",
