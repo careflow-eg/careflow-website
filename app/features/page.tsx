@@ -1,7 +1,4 @@
 import React from "react";
-import Metadata from "next";
-import Image from "next/image";
-import Link from "next/link";
 import {
   MessageSquare,
   FileSpreadsheet,
@@ -9,9 +6,6 @@ import {
   LayoutDashboard,
   Bot,
   CheckCircle2,
-  ArrowRight,
-  ShieldCheck,
-  Zap,
 } from "lucide-react";
 import { CTA } from "@/components/home/CTA";
 import { ChatDemo } from "@/components/features/ChatDemo";
@@ -28,9 +22,6 @@ export const metadata = {
 };
 
 export default function FeaturesPage() {
-  const doctorPortalUrl =
-    process.env.NEXT_PUBLIC_DOCTOR_PORTAL_URL || "https://doctor.careflowai.health";
-
   return (
     <div className="pt-28 pb-20">
       {/* Header Banner */}

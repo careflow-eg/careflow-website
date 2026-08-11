@@ -48,7 +48,7 @@ export function ContactForm() {
       console.log("Contact form submitted:", data);
       setIsSuccess(true);
       reset();
-    } catch (err) {
+    } catch {
       setErrorMessage("Failed to send message. Please try again later.");
     } finally {
       setIsSubmitting(false);

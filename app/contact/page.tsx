@@ -1,7 +1,6 @@
 import React from "react";
-import Metadata from "next";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { MapPin, Mail, Clock, ShieldCheck } from "lucide-react";
+import { MapPin, Mail, Clock } from "lucide-react";
 import { AnimatedSection, AnimatedCard } from "@/components/layout/AnimatedWrapper";
 
 export const metadata = {

@@ -1,5 +1,4 @@
 import React from "react";
-import Metadata from "next";
 import { AnimatedSection } from "@/components/layout/AnimatedWrapper";
 
 export const metadata = {

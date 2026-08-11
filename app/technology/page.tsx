@@ -1,13 +1,8 @@
 import React from "react";
-import Metadata from "next";
 import {
-  Brain,
   Database,
   ShieldCheck,
-  Cpu,
-  CheckCircle2,
   Lock,
-  Layers,
   Sparkles,
 } from "lucide-react";
 import { CTA } from "@/components/home/CTA";

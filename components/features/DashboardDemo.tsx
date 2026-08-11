@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Activity, Stethoscope, Clock, CheckCircle2, TrendingUp, AlertTriangle } from "lucide-react";
+import { Activity, Stethoscope, Clock } from "lucide-react";
 
 const differentials = [
   { disease: "Bacterial Community-Acquired Pneumonia", prob: 87, status: "High Risk", color: "bg-teal-400" },

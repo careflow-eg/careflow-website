@@ -9,7 +9,6 @@ import {
   Brain,
   Sparkles,
   LayoutDashboard,
-  ArrowRight,
   ChevronRight,
 } from "lucide-react";
 

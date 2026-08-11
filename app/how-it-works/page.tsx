@@ -1,8 +1,7 @@
 import React from "react";
-import Metadata from "next";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { CTA } from "@/components/home/CTA";
-import { ShieldCheck, Cpu, Database, Network } from "lucide-react";
+import { ShieldCheck, Cpu, Database } from "lucide-react";
 
 export const metadata = {
   title: "How It Works",

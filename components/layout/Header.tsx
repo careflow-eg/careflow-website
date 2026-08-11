@@ -20,7 +20,7 @@ import {
 
 export function Header() {
   const pathname = usePathname();
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPortalsOpen, setIsPortalsOpen] = useState(false);
@@ -69,7 +69,7 @@ export function Header() {
           </div>
           <div className="flex items-center space-x-4">
             <span className="hidden md:inline-block text-slate-400">
-              A Clinical AI Ecosystem for Egypt's Clinics
+              A Clinical AI Ecosystem for Egypt&apos;s Clinics
             </span>
             <button
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}

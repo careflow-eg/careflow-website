@@ -1,13 +1,7 @@
 import React from "react";
-import Metadata from "next";
-import Image from "next/image";
 import {
-  HeartPulse,
   Target,
   Eye,
-  Award,
-  Users,
-  ShieldCheck,
   CheckCircle2,
 } from "lucide-react";
 import { CTA } from "@/components/home/CTA";

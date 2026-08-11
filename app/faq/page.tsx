@@ -1,5 +1,4 @@
 import React from "react";
-import Metadata from "next";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTA } from "@/components/home/CTA";
 import { AnimatedSection } from "@/components/layout/AnimatedWrapper";

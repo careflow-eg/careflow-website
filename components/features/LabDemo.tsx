@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShieldCheck, FileText, CheckCircle2, AlertTriangle, Scan } from "lucide-react";
+import { ShieldCheck, FileText, CheckCircle2, Scan } from "lucide-react";
 
 const labValues = [
   { name: "Hemoglobin A1c", ref: "< 5.7 %", val: "8.4 %", status: "High", badgeBg: "bg-rose-950/80 text-rose-400 border-rose-800" },
@@ -13,7 +13,6 @@ const labValues = [
 
 export function LabDemo() {
   const [scanStep, setScanStep] = useState<number>(0);
-  const [isScanning, setIsScanning] = useState<boolean>(true);
 
   useEffect(() => {
     const interval = setInterval(() => {

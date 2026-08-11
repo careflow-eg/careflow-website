@@ -11,7 +11,6 @@ import {
   ShieldCheck,
   CheckCircle2,
   Activity,
-  FileText,
   FileCheck2,
   Flame,
 } from "lucide-react";

@@ -10,7 +10,6 @@ import {
   Stethoscope,
   Shield,
   Activity,
-  HeartPulse,
 } from "lucide-react";
 
 export function Footer() {

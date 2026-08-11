@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Eye, Crosshair, Sparkles, CheckCircle2, ShieldAlert } from "lucide-react";
+import { Eye, Crosshair, Sparkles } from "lucide-react";
 
 const scans = [
   {

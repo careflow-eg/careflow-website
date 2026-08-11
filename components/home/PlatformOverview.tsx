@@ -2,14 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   Brain,
   FileSpreadsheet,
   FileSearch,
   LayoutDashboard,
   Bot,
-  CheckCircle2,
   ArrowRight,
   Mic,
 } from "lucide-react";
